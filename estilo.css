@@ -18,6 +18,7 @@
     --c-bg: hsl(0, 0%, 5%);
     --c-lgray: #f1efe7;
     --c-yellow: #ffbd00;
+    --c-blue: #38b6ffff;
     --c-shadow: #999;
     --fs-text: 12px;
     --fs-large-text: 14px;
@@ -32,7 +33,7 @@ html,body {
     flex-direction: column;
     background: 
      linear-gradient(to right, #ffbd00, #e4ab00),
-     url("absurdity.png");
+     url("src/absurdity.png");
      background-blend-mode: overlay; 
 }
 header {
@@ -72,6 +73,9 @@ h1{
     font-family: MontrisTestM,Ubuntu, sans-serif;
     letter-spacing: 1.5px;
 }
+h3{
+    color: var(--c-yellow);
+}
 h1 img{
 	width:30%;
     margin-right: 15px;
@@ -100,6 +104,9 @@ main article{
 }
 main article span{
 	flex:1;
+}
+main article span .flecha-icon{
+	width: 15%;
 }
 nav ul{
 	list-style-type:none;
@@ -131,12 +138,12 @@ nav ul li a{
     text-decoration: none;
     color:inherit;
 }
+/*
 @keyframes move {
     100% {
         transform: translate3d(0, 0, 1px) rotate(360deg);
     }
 }
-
 .background {
     position: fixed;
     width: 100vw;
@@ -341,3 +348,4 @@ nav ul li a{
     transform-origin: -22vw 21vh;
     box-shadow: 40vmin 0 5.086409683852754vmin currentColor;
 }
+*/

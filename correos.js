@@ -27,12 +27,22 @@ var supercorreos;
 			correos.forEach(function(email){
 				if(email.from == cliente){
 					let articulo = document.createElement("article")
-					articulo.innerHTML = "<span>"+email.fecha+"</span><span>"+email.from+"</span><span>➡️ </span><span>"+email.to+"</span><span>"+email.asunto+"</span>";
+					articulo.innerHTML =
+					"<span>" + email.fecha + "</span>" +
+					"<span>" + email.to + "</span>" +
+					"<span><img src='src/send.png' alt='←' class='flecha-icon'></span>" +
+					"<span>" + email.from + "</span>" +
+					"<span>" + email.asunto + "</span>"
 					seccion.appendChild(articulo)
 				}
 				if(email.to == cliente){
 					let articulo = document.createElement("article")
-					articulo.innerHTML = "<span>"+email.fecha+"</span><span>"+email.to+"</span><span>⬅️ </span><span>"+email.from+"</span><span>"+email.asunto+"</span>";
+					articulo.innerHTML =
+					"<span>" + email.fecha + "</span>" +
+					"<span>" + email.from + "</span>" +
+					"<span><img src='src/received.png' alt='→' class='flecha-icon'></span>" +
+					"<span>" + email.to + "</span>" +
+					"<span>" + email.asunto + "</span>"
 					seccion.appendChild(articulo)
 				}
 			})
@@ -41,16 +51,29 @@ var supercorreos;
 	
 	function filtrar(cliente){
 		let seccion = document.createElement("section")
+		let titulo = document.createElement("h3")
+		titulo.textContent = cliente
+		seccion.appendChild(titulo)
 		principal.innerHTML = ""
 		supercorreos.forEach(function(email){
 			if(email.from == cliente){
 				let articulo = document.createElement("article")
-				articulo.innerHTML = "<span>"+email.fecha+"</span><span>"+email.from+"</span><span>➡️ </span><span>"+email.to+"</span><span>"+email.asunto+"</span>";
+				articulo.innerHTML =
+					"<span>" + email.fecha + "</span>" +
+					"<span>" + email.to + "</span>" +
+					"<span><img src='src/send.png' alt='←' class='flecha-icon'></span>" +
+					"<span>" + email.from + "</span>" +
+					"<span>" + email.asunto + "</span>"
 				seccion.appendChild(articulo)
 			}
 			if(email.to == cliente){
 				let articulo = document.createElement("article")
-				articulo.innerHTML = "<span>"+email.fecha+"</span><span>"+email.to+"</span><span>⬅️ </span><span>"+email.from+"</span><span>"+email.asunto+"</span>";
+				articulo.innerHTML =
+					"<span>" + email.fecha + "</span>" +
+					"<span>" + email.from + "</span>" +
+					"<span><img src='src/received.png' alt='→' class='flecha-icon'></span>" +
+					"<span>" + email.to + "</span>" +
+					"<span>" + email.asunto + "</span>"
 				seccion.appendChild(articulo)
 			}
 		})
